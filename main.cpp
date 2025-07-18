@@ -101,11 +101,6 @@ int main()
 
     std::thread accepting_thread{accepting, server_sock};
 
-    // for (auto& [_, client] : clients)
-    // {
-    //     reading(client);
-    // }
-
     accepting_thread.join();
     close(server_sock);
 
